@@ -4,6 +4,7 @@ import React, {useState} from 'react'
 import NavBar from './components/NavBar';
 import News from './components/News';
 import LoadingBar from 'react-top-loading-bar'
+import About from './components/About'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
             <Route exact path="/science" element={<News setProgress={setProgress} key="science" pageSize={pageSize} country="in" category="science" />}></Route>
             <Route exact path="/sports" element={<News setProgress={setProgress} key="sports" pageSize={pageSize} country="in" category="sports" />}></Route>
             <Route exact path="/technology" element={<News setProgress={setProgress} key="technology" pageSize={pageSize} country="in" category="technology" />}></Route>
+            <Route exact path="/about" element={<About/>}></Route>
           </Routes>
         </Router>
       </div>
